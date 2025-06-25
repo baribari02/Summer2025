@@ -1,2 +1,2 @@
 # Summer2025
-Here we post all out work
+Here we post our work.
