@@ -15,7 +15,7 @@
 int error = 0;
 string deviceState = "disconnected";
 Console.WriteLine($"Error {error}");
-Console.WriteLine($"Variable 'deviceState' is {deviceState} and should be ready, busy or error");
+Console.WriteLine($"Variable 'deviceState' is {deviceState} and should be of type ready, busy or error");
 
 //Exemplu 2
 //if (userRole.Trim().ToLower() == "admin" ||
@@ -33,7 +33,7 @@ Console.WriteLine($"Variable 'deviceState' is {deviceState} and should be ready,
 int error = 0;
 string userRole = "guest";
 Console.WriteLine($"Error {error}");
-Console.WriteLine($"Variable 'userRole' is {userRole} and should be admin, operator or viewer");
+Console.WriteLine($"Variable 'userRole' is {userRole} and should be of type admin, operator or viewer");
 
 
 //Exemplu 3
@@ -52,4 +52,4 @@ Console.WriteLine($"Variable 'userRole' is {userRole} and should be admin, opera
 int error = 0;
 string testMode = "calibration";
 Console.WriteLine($"Error {error}");
-Console.WriteLine($"Variable 'testMode' is {testMode} and should be normal, debug or safe");
+Console.WriteLine($"Variable 'testMode' is {testMode} and should be of type normal, debug or safe");
