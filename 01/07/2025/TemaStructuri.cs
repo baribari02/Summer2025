@@ -61,7 +61,6 @@ namespace TemaStructures
             AfisareDate();
         }
 
-        // Metodă statică pentru citirea unui angajat de la consolă
         public static Employee Citire()
         {
             Employee e = new Employee();
@@ -107,7 +106,7 @@ namespace TemaStructures
             return e;
         }
 
-        // Metoda Main inclusă în struct
+       
         public static void Main()
         {
             Employee[] employees = new Employee[100];
