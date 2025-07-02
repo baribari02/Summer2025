@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.Numerics;
 using System.Threading.Channels;
 
@@ -7,37 +7,35 @@ namespace bazaDate
    
     internal class Program
     { 
-         static string firstName () 
+         static string name () 
         {
-            Console.WriteLine("Introduceti prenumele angajatului: ");
+           
             string fName = Console.ReadLine();
             return fName;
             
             
         }
-        static string familyName()
+        static string? middleName()
         {
-            Console.WriteLine("Introduceti numele angajatului: ");
-            string lastName = Console.ReadLine();
-            return lastName;
-
-
-        }
-        static string middleName()
-        {
-            Console.WriteLine("Exista  un al doilea prenume?(y/n): ");
-            string mName=null;
-            string test = Console.ReadLine();
-            if ( test  == "n" )
+            while (true)
             {
-                mName = "-";
+                Console.Write("Există un al doilea prenume? (y/n): ");
+                string? input = Console.ReadLine();
+
+                if (input == "n")
+                {
+                    return null;
+                }
+
+                if (input == "y")
+                {
+                    Console.Write("Introduceti cel de-al doilea prenume al angajatului: ");
+                    string? mName = Console.ReadLine();
+                    return  mName;
+                }
+
+                Console.WriteLine("Răspuns invalid. Vă rugăm să introduceți 'y' sau 'n'.");
             }
-            if ( test == "y" )
-            {
-                Console.WriteLine("Introduceti cel de al doilea prenume al angajatului: ");
-                mName = Console.ReadLine();
-            }
-            return mName;
 
         }
         static uint contractHoursPerWeek()
@@ -51,18 +49,9 @@ namespace bazaDate
 
         static bool currentlyEmployed()
         {
-            Console.WriteLine("Mai este angajat?y/n");
-            string i = Console.ReadLine();
-            bool status = false;
-            if (i == "y")
-            {
-                status = true;
-            }
-            if (i == "n")
-            {
-                status = false;
-            }
-            return status;
+            Console.Write("Mai este angajat? (true/false): ");
+            string? input = Console.ReadLine();
+            return bool.Parse(input);
         }
         static double wagePerYear()
         {
@@ -96,10 +85,11 @@ namespace bazaDate
             string z="y";
             do
             {
-                
-                string prenume = firstName();
+                Console.WriteLine("Introduceti prenumele angajatului: ");
+                string prenume = name();
                 string numeMijlociu = middleName();
-                string nume = familyName();
+                Console.WriteLine("Introduceti numele angajatului: ");
+                string nume = name();
                 uint ore = contractHoursPerWeek();
                 bool angajat = currentlyEmployed();
                 double salariu = wagePerYear();
