@@ -27,7 +27,7 @@ namespace TemaStructures
             return ContractHoursPerWeek > 0 ? WagePerYear / (ContractHoursPerWeek * 52) : 0;
         }
 
-        public void AfisareDate()
+        public void ShowInformation()
         {
             Console.WriteLine("---------------");
             Console.WriteLine($"Nume complet: {GetFullName()}");
@@ -54,11 +54,6 @@ namespace TemaStructures
         public void IncreaseWageByPercentage(double procent)
         {
             WagePerYear += WagePerYear * (procent / 100);
-        }
-
-        public void ShowInformation()
-        {
-            AfisareDate();
         }
 
         public static Employee Citire()
