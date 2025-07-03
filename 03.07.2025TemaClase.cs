@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SignalMachineApp
+namespace SignalMachine
 {
     public class Signal
     {
